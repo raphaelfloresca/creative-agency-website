@@ -3,6 +3,7 @@
 
 :root {
     --primary-color: #f60f20;
+    --secondary-color: #1b206e; 
 }
 
 /* CSS reset used to remove margin and padding, border-box used so that padding does not affect width of elements */
@@ -62,12 +63,23 @@ section.home {
 }
 
 .logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: #fff;
+    z-index: 15;
+}
+
+.logo a {
     position: absolute;
+    text-decoration: none;
+    color: #111;
     top: 30px;
     left: 100px;
     font-size: 2rem;
     font-weight: 700;
-    z-index: 20;
 }
 
 /* TOGGLE */
@@ -104,11 +116,12 @@ section.home {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 1s;
+    transition: left 1s;
 }
 
 .navigation.active {
     left: 0;
+    transition: left 1s;
 }
 
 .navigation ul {
@@ -130,7 +143,9 @@ section.home {
 
 .navigation ul li a:hover {
     color: var(--primary-color);
+    font-size: 2.6rem;
 }
+
 
 .navigation .social-bar {
     position: absolute;
@@ -146,6 +161,10 @@ section.home {
 .navigation .social-bar a {
     display: inline-block;
     transform: scale(0.5);
+}
+
+.navigation .social-bar a:hover {
+    transform: scale(0.75);
 }
 
 .navigation .email-icon {
@@ -250,6 +269,91 @@ section.home {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-form {
+    position: relative;
+    background: #f9f9f9;
+    /* Take away 400px from the width of viewport */
+    width: calc(100% - 400px);
+    padding: 60px 40px 20px;
+}
+
+.contact-form form {
+    width: 100%;
+}
+
+.contact-form .row {
+    width: 100%;
+    display: flex;
+}
+
+.contact-form .input50 {
+    width: 50%;
+    margin: 0 10px;
+}
+
+.contact-form .input100 {
+    width: 100%;
+    margin: 0 10px;
+}
+
+.contact-form .row input,
+.contact-form .row textarea {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #111;
+    background: transparent;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    outline: none;
+    font-weight: 300;
+    margin: 10px 0;
+    resize: none;
+
+}
+
+.contact-form .row textarea {
+    height: 150px;
+}
+
+.contact-form .row input[type='submit'] {
+    background-color: var(--secondary-color);
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    border: 0;
+    cursor: pointer;
+}
+
+.contact-info {
+    width: 350px;
+    background: #f9f9f9;
+    padding: 60px 40px 20px;
+}
+
+.contact-info .info-box {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.contact-info .info-box .contact-icon {
+    width: 20px;
+    margin-right: 40px;
+}
+
+.contact-info .info-box .details h4 {
+    color: var(--secondary-color);
+}
+
+.contact-info .info-box .details p {
+    margin-top: 0;
 }
 
 /* Media query used to format appearance on mobile devices */
@@ -258,7 +362,7 @@ section.home {
         display: none;
     }
 
-    .logo {
+    .logo a {
         top: 10px;
         left: 40px;
         font-size: 1.5rem;
@@ -272,10 +376,19 @@ section.home {
         font-size: 2rem;
     }
 
-
     .services {
         grid-template-columns: repeat(2, 1fr);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 100%;
+        margin: 0 0 40px;
     }
 }
 
@@ -283,5 +396,21 @@ section.home {
     .services {
         grid-template-columns: 1fr;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form .row {
+        flex-direction: column;
+    }
+
+    .contact-form .input50,
+    .contact-form .input100 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contact-info {
+        width: 100%;
+        margin-top: 20px;
+        padding: 30px 30px 20px;
     }
 }
