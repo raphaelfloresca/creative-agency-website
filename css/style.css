@@ -104,6 +104,16 @@ section.home {
     background-position: center;
 }
 
+/* Animation to make navigation slide upon page load */
+@keyframes navigationTransition {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100%;
+    }
+}
+
 /* NAVIGATION */
 .navigation {
     position: fixed;
@@ -117,6 +127,7 @@ section.home {
     justify-content: center;
     align-items: center;
     transition: left 1s;
+    animation: navigationTransition 1s;
 }
 
 .navigation.active {
