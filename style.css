@@ -72,6 +72,10 @@ section.home {
     z-index: 15;
 }
 
+.logo.homepage {
+    background: transparent;
+}
+
 .logo a {
     position: absolute;
     text-decoration: none;
