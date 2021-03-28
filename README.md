@@ -10,3 +10,4 @@ Changes include:
 * Linking the header logo back to the main page of the website.
 * Make the social media icons and navigation links larger upon hover.
 * Added a service worker to cache pages for faster loading during page navigation.
+* Made homepage header transparent to let picture go all the way to the top.
