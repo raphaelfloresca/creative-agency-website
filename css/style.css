@@ -127,7 +127,6 @@ section.home {
     justify-content: center;
     align-items: center;
     transition: left 1s;
-    animation: navigationTransition 1s;
 }
 
 .navigation.active {
