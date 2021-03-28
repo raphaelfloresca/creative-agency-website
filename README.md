@@ -9,3 +9,4 @@ Changes include:
 * Animating the navigation to come on and off the screen when the toggle is pressed and when a navigation link is clicked.
 * Linking the header logo back to the main page of the website.
 * Make the social media icons and navigation links larger upon hover.
+* Added a service worker to cache pages for faster loading during page navigation.

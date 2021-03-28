@@ -89,7 +89,7 @@ section.home {
     right: 0;
     width: 60px;
     height: 60px;
-    background: var(--primary-color) url(/images/menu.png);
+    background: var(--primary-color) url(images/menu.png);
     background-size: 30px;
     background-position: center;
     background-repeat: no-repeat;
@@ -98,7 +98,7 @@ section.home {
 }
 
 .toggle.active {
-    background: var(--primary-color) url(/images/close.png);
+    background: var(--primary-color) url(images/close.png);
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;
